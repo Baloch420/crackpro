@@ -195,10 +195,10 @@ module Facebook
       puts ("\n[1] Method Login b-api.facebook.com")
       puts ("[2] Method Login m.facebook.com")
       puts ("[3] Method Login mbasic.facebook.com")
-      puts ("[4]Method  Login free.facebook.com")
+      puts ("[4] Method  Login free.facebook.com")
       puts ("[5] Method Login touch.facebook.com")
       
-      print ("\n[?] Pilih : ")
+      print ("\n[?] Chose : ")
       tod = STDIN.gets.to_i
       case tod; when 1; @method = 'Api2'; when 2; @method = 'M'; when 3; @method = 'Mbasic'; when 4;@method = 'Free';else;@method = 'Touch';end
       print ("\n[?] Password Auto/Manual (a/m) : ")
@@ -223,12 +223,12 @@ module Facebook
         @password = ['Anjing','Sayang','Kontol']
         @auto_pass = true
       end
-      print ("\n[?] Crack Menggunakan Tanggal Lahir (y/n) : ")
+      print ("\n[?] Crack Start (y/n) : ")
       @use_ttl = (STDIN.gets.chomp.downcase == 'y')
     end
 
     def start
-      puts ("\n[!] Baloch OK Di : #{@ok_save}")
+      puts ("\n[!] Baloch OK : #{@ok_save}")
       puts ("[!] Baloch CP : #{@cp_save}\n\n")
       ok = 0
       cp = 0
@@ -340,7 +340,7 @@ def main
   puts ("[8] Logout (from token)")
   puts ("[0] Exit\n\n")
   
-  print ("[?] Pilih : ")
+  print ("[?] Chose : ")
   pilih = Integer(STDIN.gets,exception: false)
 
   case pilih
@@ -523,7 +523,7 @@ def LoginAkun
     puts ("[4] Login Via Cookies")
     puts ("[0] Exit")
 
-    print ("\n[?] Pilih : ")
+    print ("\n[?] Chose : ")
     no = STDIN.gets.chomp()
 
     case no
